@@ -13,7 +13,7 @@ For instance if your input file is:
 
 After executing:
 
-$ ./pp.pl pp.hello.txt -o hello.txt
+    $ ./pp.pl pp.hello.txt -o hello.txt
 
 Your output file would be:
 
