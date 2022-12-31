@@ -25,3 +25,20 @@ Your output file would be:
     4 Hellow world!
     5 Hellow world!
 
+The example above shows a couple of the most important feature.
+
+* Any line that starts with `%` is considered perl code that is emmitted out to an Intermediate Perl Script (IPS)
+* Lines **not** preceeded by `%` are converted into prints. On those:
+  * Any `${var}` will be interpolated with the value of variable `$var`.
+  * Any `$((expression))` will be interpolated with the value of the given perl expression. For example:
+  
+        % $a=1; $b=2;
+        the value of a + b = $(( $a + $b ))
+  
+    Will generate:
+  
+        the value of a + b = 3
+    
+       
+  
+  
